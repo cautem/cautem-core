@@ -54,6 +54,7 @@ const (
 	ImageLocal  = "cautem-sandbox:local"
 	ImageGUI    = "cautem-sandbox:gui"
 	ImageGPU    = "cautem-sandbox:gpu"
+	ImageGUIGPU = "cautem-sandbox:gui-gpu"
 	ImageCursor = "cautem-sandbox:cursor"
 	ImageClaude = "cautem-sandbox:claude"
 	ImageCodex  = "cautem-sandbox:codex"
@@ -68,6 +69,7 @@ const (
 	ImageBaseRef   = GHCRSandboxes + "/base:latest"
 	ImageGUIRef    = GHCRSandboxes + "/gui:latest"
 	ImageGPURef    = GHCRSandboxes + "/gpu:latest"
+	ImageGUIGPURef = GHCRSandboxes + "/gui-gpu:latest"
 	ImageCursorRef = GHCRSandboxes + "/cursor:latest"
 	ImageClaudeRef = GHCRSandboxes + "/claude:latest"
 	ImageCodexRef  = GHCRSandboxes + "/codex:latest"
@@ -91,6 +93,8 @@ func PublishedImage(local string) (string, bool) {
 		return ImageGUIRef, true
 	case "gpu":
 		return ImageGPURef, true
+	case "gui-gpu":
+		return ImageGUIGPURef, true
 	case "cursor":
 		return ImageCursorRef, true
 	case "claude":

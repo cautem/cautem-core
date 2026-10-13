@@ -8,6 +8,7 @@ func TestPublishedImage(t *testing.T) {
 		"cautem-sandbox:base":    ImageBaseRef,
 		ImageGUI:                 ImageGUIRef,
 		ImageGPU:                 ImageGPURef,
+		ImageGUIGPU:              ImageGUIGPURef,
 		ImageCursor:              ImageCursorRef,
 		" cautem-Sandbox:Claude": ImageClaudeRef,
 		ImageCodex:               ImageCodexRef,

@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+## [v0.2.0] - 2026-10-13
+
+### Added
+
+- Add shared identifiers and published image resolution for the experimental `gui-gpu` sandbox image.
+
+### Changed
+
+- Split policy parsing, validation, schema, and encoding helpers into focused files without changing the policy format.
+- Refresh `golang.org/x/sys`, gRPC, and protobuf to their latest compatible releases.
+
 ## [v0.1.6] - 2026-10-11
 
 ### Changed
