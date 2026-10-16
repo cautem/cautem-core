@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [v0.3.1] - 2026-10-16
+
+### Changed
+
+- Publish the module under `github.com/cautem/quarshell-core`; earlier tags keep their original module path.
+
 ## [v0.3.0] - 2026-10-16
 
 ### Added

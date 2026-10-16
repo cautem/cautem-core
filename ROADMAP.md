@@ -1,6 +1,6 @@
 # Roadmap — cautem-core
 
-Status: **v0.3.0** (release prepared) · Part of [cautem/cautem](https://github.com/cautem)
+Status: **v0.3.1** (release prepared) · Part of [cautem/cautem](https://github.com/cautem)
 
 Shared policy schema and egress engine.
 
