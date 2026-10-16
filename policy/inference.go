@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/cautem/cautem-core/defaults"
+	"github.com/cautem/quarshell-core/defaults"
 )
 
 // Inference names known LLM/API destinations (expanded into egress allow rules).

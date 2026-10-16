@@ -3,7 +3,7 @@ package env_test
 import (
 	"testing"
 
-	"github.com/cautem/cautem-core/env"
+	"github.com/cautem/quarshell-core/env"
 )
 
 func TestLooksLikeCredential(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/cautem/cautem-core/internal/tofu"
+	"github.com/cautem/quarshell-core/internal/tofu"
 )
 
 func TestTOFUFirstThenMismatch(t *testing.T) {

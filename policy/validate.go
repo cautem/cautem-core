@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cautem/cautem-core/internal/hostpattern"
+	"github.com/cautem/quarshell-core/internal/hostpattern"
 	"gopkg.in/yaml.v3"
 )
 

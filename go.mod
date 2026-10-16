@@ -1,4 +1,4 @@
-module github.com/cautem/cautem-core
+module github.com/cautem/quarshell-core
 
 go 1.27.0
 
