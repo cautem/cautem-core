@@ -104,10 +104,10 @@ func rejectRemovedSchema(data []byte) error {
 		return nil
 	}
 	if probe.Filesystem.Kind != 0 {
-		return fmt.Errorf("policy: key \"filesystem\" removed; use OpenShell naming filesystem_policy / landlock")
+		return fmt.Errorf("policy: key \"filesystem\" removed; use filesystem_policy / landlock")
 	}
 	if probe.Network.Kind != 0 {
-		return fmt.Errorf("policy: key \"network\" removed; use OpenShell naming network_policies")
+		return fmt.Errorf("policy: key \"network\" removed; use network_policies")
 	}
 	return nil
 }

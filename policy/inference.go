@@ -83,7 +83,7 @@ var BuiltinProviders = map[string]ProviderPreset{
 		}},
 		EnvKeys: []string{"GROQ_API_KEY"},
 	},
-	// Host-backed models via host.cautem.internal (OpenShell: host.openshell.internal).
+	// Host-backed models also accept the legacy host.openshell.internal alias.
 	"local": {
 		ID: "local",
 		Rules: []AllowRule{

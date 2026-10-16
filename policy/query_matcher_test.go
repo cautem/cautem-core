@@ -9,7 +9,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-func TestOpenShellMCPMatcherRoundTrip(t *testing.T) {
+func TestCompatMCPMatcherRoundTrip(t *testing.T) {
 	for _, selector := range []string{`tool: {any: ["safe_*", "read_*"]}`, `params: {name: {any: ["safe_*", "read_*"]}}`, `tool: ignored
               params: {name: {any: ["safe_*", "read_*"]}}`} {
 		source := fmt.Sprintf(`version: 1
@@ -63,7 +63,7 @@ network_policies:
 	}
 }
 
-func TestOpenShellMatcherGlobObjectCanonicalizes(t *testing.T) {
+func TestCompatMatcherGlobObjectCanonicalizes(t *testing.T) {
 	var matcher policy.QueryMatcher
 	if err := yaml.Unmarshal([]byte(`{glob: "safe_*"}`), &matcher); err != nil {
 		t.Fatal(err)
@@ -87,7 +87,7 @@ func TestOpenShellMatcherGlobObjectCanonicalizes(t *testing.T) {
 	}
 }
 
-func TestOpenShellMatcherRejectsMalformedShapes(t *testing.T) {
+func TestCompatMatcherRejectsMalformedShapes(t *testing.T) {
 	for _, input := range []string{`42`, `true`, `["safe"]`, `{any: null}`, `{any: [true]}`, `{glob: 42}`, `{any: [safe], other: value}`, `{any: [safe], any: [other]}`} {
 		var matcher policy.QueryMatcher
 		if err := yaml.Unmarshal([]byte(input), &matcher); err == nil {
@@ -96,7 +96,7 @@ func TestOpenShellMatcherRejectsMalformedShapes(t *testing.T) {
 	}
 }
 
-func TestOpenShellToolValidation(t *testing.T) {
+func TestCompatToolValidation(t *testing.T) {
 	disabled := false
 	for _, tc := range []struct {
 		name             string

@@ -10,17 +10,20 @@ import (
 // PlaceholderPrefix is the guest-visible credential marker written into sandbox env.
 const PlaceholderPrefix = "cautem:resolve:env:"
 
-// OpenShellPlaceholderPrefix is accepted on rewrite for OpenShell guest compatibility.
-const OpenShellPlaceholderPrefix = "openshell:resolve:env:"
+// LegacyCredentialPlaceholderPrefix preserves the alternate guest credential marker.
+const LegacyCredentialPlaceholderPrefix = "openshell:resolve:env:"
+
+// OpenShellPlaceholderPrefix is a deprecated alias retained for source compatibility.
+const OpenShellPlaceholderPrefix = LegacyCredentialPlaceholderPrefix
 
 // rewritePrefixes are accepted when the proxy rewrites requests (canonical first).
 var rewritePrefixes = []string{
 	PlaceholderPrefix,
-	OpenShellPlaceholderPrefix,
+	LegacyCredentialPlaceholderPrefix,
 }
 
 // DefaultPassthrough is forwarded into the sandbox with real host values (never secrets).
-// OpenShell model: credential keys are NOT auto-injected from a global allowlist —
+// Credential keys are NOT auto-injected from a global allowlist —
 // only via policy credentials.env_allow / provider GuestEnvKeys (see FromHostForGuest extraKeys).
 var DefaultPassthrough = []string{
 	"TERM",

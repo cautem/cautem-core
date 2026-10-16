@@ -14,7 +14,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-const sampleOpenShell = `
+const samplePolicyDocument = `
 version: 1
 filesystem_policy:
   include_workdir: true
@@ -37,8 +37,8 @@ credentials:
   env_allow: [TERM, LANG]
 `
 
-func TestParseOpenShellNaming(t *testing.T) {
-	doc, err := policy.Parse([]byte(sampleOpenShell))
+func TestParseCompatNaming(t *testing.T) {
+	doc, err := policy.Parse([]byte(samplePolicyDocument))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -56,7 +56,7 @@ func TestParseOpenShellNaming(t *testing.T) {
 	}
 }
 
-func TestPinnedOpenShellPolicyVersionU32ParseAndEnforcement(t *testing.T) {
+func TestPinnedCompatPolicyVersionU32ParseAndEnforcement(t *testing.T) {
 	for _, version := range []string{"0", "1", "4294967295"} {
 		t.Run(version, func(t *testing.T) {
 			doc, err := policy.Parse([]byte("version: " + version + "\n"))
@@ -113,7 +113,7 @@ func TestPinnedOpenShellPolicyVersionU32ParseAndEnforcement(t *testing.T) {
 	}
 }
 
-func TestPinnedOpenShellLandlockEnumDefaultsAndNullValidation(t *testing.T) {
+func TestPinnedCompatLandlockEnumDefaultsAndNullValidation(t *testing.T) {
 	for _, source := range []string{
 		"version: 1\nlandlock: {}\n",
 		"version: 1\nlandlock:\n  compatibility: best_effort\n",
@@ -150,7 +150,7 @@ func TestPinnedOpenShellLandlockEnumDefaultsAndNullValidation(t *testing.T) {
 	}
 }
 
-func TestPinnedOpenShellProcessIdentityInputsAndValidation(t *testing.T) {
+func TestPinnedCompatProcessIdentityInputsAndValidation(t *testing.T) {
 	valid := []struct {
 		name, user, group string
 	}{
@@ -297,7 +297,7 @@ network:
 }
 
 func TestEngineAllowDeny(t *testing.T) {
-	doc, err := policy.Parse([]byte(sampleOpenShell))
+	doc, err := policy.Parse([]byte(samplePolicyDocument))
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -333,7 +333,7 @@ func TestEmptyNetworkDenyAll(t *testing.T) {
 func TestLoadFile(t *testing.T) {
 	dir := t.TempDir()
 	path := filepath.Join(dir, "p.yaml")
-	if err := os.WriteFile(path, []byte(sampleOpenShell), 0o644); err != nil {
+	if err := os.WriteFile(path, []byte(samplePolicyDocument), 0o644); err != nil {
 		t.Fatal(err)
 	}
 	doc, err := policy.Load(path)
@@ -377,7 +377,7 @@ network_policies:
 	}
 }
 
-func TestFilesystemPolicyIncludeWorkdirOpenShellDefaultAndRoundTrip(t *testing.T) {
+func TestFilesystemPolicyIncludeWorkdirCompatDefaultAndRoundTrip(t *testing.T) {
 	for _, input := range []string{
 		"version: 1\n",
 		"version: 1\nfilesystem_policy: {}\n",
@@ -667,7 +667,7 @@ network_policies:
 	}
 }
 
-func TestParseOpenShellJSONRPCOptions(t *testing.T) {
+func TestParseCompatJSONRPCOptions(t *testing.T) {
 	input := `version: 1
 network_policies:
   rpc:
@@ -713,7 +713,7 @@ version: 1
 	}
 }
 
-func TestParseAcceptsDeprecatedOpenShellBinaryHarness(t *testing.T) {
+func TestParseAcceptsDeprecatedCompatBinaryHarness(t *testing.T) {
 	input := `version: 1
 network_policies:
   tools:
@@ -739,7 +739,7 @@ network_policies:
 	}
 }
 
-func TestParseOpenShellMCPOptions(t *testing.T) {
+func TestParseCompatMCPOptions(t *testing.T) {
 	input := `version: 1
 network_policies:
   tools:
@@ -772,7 +772,7 @@ network_policies:
 	}
 }
 
-func TestParseOpenShellCredentialBinding(t *testing.T) {
+func TestParseCompatCredentialBinding(t *testing.T) {
 	input := `version: 1
 network_policies:
   internal:
