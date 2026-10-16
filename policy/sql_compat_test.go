@@ -9,7 +9,7 @@ import (
 	"github.com/cautem/cautem-core/policy"
 )
 
-func TestOpenShellSQLAuditConfigAndCommandSelectors(t *testing.T) {
+func TestCompatSQLAuditConfigAndCommandSelectors(t *testing.T) {
 	doc, err := policy.Parse([]byte(`version: 1
 network_policies:
   database:
@@ -58,7 +58,7 @@ network_policies:
 	}
 }
 
-func TestOpenShellSQLAndTCPValidation(t *testing.T) {
+func TestCompatSQLAndTCPValidation(t *testing.T) {
 	base := `version: 1
 network_policies:
   db:

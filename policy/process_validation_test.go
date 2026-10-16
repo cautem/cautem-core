@@ -2,7 +2,7 @@ package policy
 
 import "testing"
 
-func TestProcessIdentityMatchesOpenShellValues(t *testing.T) {
+func TestProcessIdentityMatchesCompatValues(t *testing.T) {
 	for _, value := range []string{"sandbox", "1", "1000", "4294967294"} {
 		if err := validateProcessIdentity("run_as_user", value); err != nil {
 			t.Errorf("valid identity %q rejected: %v", value, err)

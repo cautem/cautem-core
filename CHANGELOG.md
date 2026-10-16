@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+## [v0.3.0] - 2026-10-16
+
+### Added
+
+- Add fail-closed resource admission policy for caller-attached backend resources, including workspace-scoped required labels and reserved driver metadata keys.
+
+### Compatibility
+
+- Retain `OpenShellPlaceholderPrefix` as a deprecated alias for the legacy credential marker so existing Go callers continue to compile.
+
+### Changed
+
+- Use neutral compatibility terminology in local credential placeholder names, policy errors, comments, and tests while preserving the legacy wire marker.
+
 ## [v0.2.0] - 2026-10-13
 
 ### Added
