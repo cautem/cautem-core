@@ -1,6 +1,6 @@
 # Roadmap — cautem-core
 
-Status: **v0.2.0** (release prepared) · Part of [cautem/cautem](https://github.com/cautem)
+Status: **v0.3.0** (release prepared) · Part of [cautem/cautem](https://github.com/cautem)
 
 Shared policy schema and egress engine.
 
@@ -20,4 +20,4 @@ Shared policy schema and egress engine.
 
 ## Release
 
-Cascade: tag **this repo before its dependents**; downstream modules pin `v0.2.0`.
+Cascade: tag **this repo before its dependents**; downstream modules pin `v0.3.0`.
