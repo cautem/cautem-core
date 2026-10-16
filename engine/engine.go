@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/cautem/cautem-core/internal/hostpattern"
-	"github.com/cautem/cautem-core/internal/tofu"
-	"github.com/cautem/cautem-core/policy"
+	"github.com/cautem/quarshell-core/internal/hostpattern"
+	"github.com/cautem/quarshell-core/internal/tofu"
+	"github.com/cautem/quarshell-core/policy"
 )
 
 // Decision is admit / deny for one request.

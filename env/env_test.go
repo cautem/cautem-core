@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/cautem/cautem-core/env"
+	"github.com/cautem/quarshell-core/env"
 )
 
 func TestFromHostForGuestNoGlobalAPIKeys(t *testing.T) {

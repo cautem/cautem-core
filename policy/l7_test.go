@@ -3,7 +3,7 @@ package policy_test
 import (
 	"testing"
 
-	"github.com/cautem/cautem-core/policy"
+	"github.com/cautem/quarshell-core/policy"
 )
 
 func docWithAllows(rules ...policy.AllowRule) policy.Document {

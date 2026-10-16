@@ -5,10 +5,10 @@
   Canonical policy schema, L4/L7 allowlists, host patterns, TOFU, and env placeholders.
 </p>
 <p align="center">
-  <a href="https://github.com/cautem/cautem-core/actions/workflows/ci.yml"><img src="https://github.com/cautem/cautem-core/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="https://pkg.go.dev/github.com/cautem/cautem-core"><img src="https://pkg.go.dev/badge/github.com/cautem/cautem-core.svg" alt="Go Reference"></a>
+  <a href="https://github.com/cautem/quarshell-core/actions/workflows/ci.yml"><img src="https://github.com/cautem/quarshell-core/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://pkg.go.dev/github.com/cautem/quarshell-core"><img src="https://pkg.go.dev/badge/github.com/cautem/quarshell-core.svg" alt="Go Reference"></a>
   <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg" alt="License"></a>
-  <a href="https://github.com/cautem/cautem-core"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
+  <a href="https://github.com/cautem/quarshell-core"><img src="https://img.shields.io/badge/Go-1.27+-00ADD8?logo=go" alt="Go Version"></a>
 </p>
 <p align="center">
   <sub>Part of the <a href="https://github.com/cautem">cautem / cautem</a> ecosystem</sub>
@@ -50,8 +50,8 @@ package main
 import (
     "fmt"
 
-    "github.com/cautem/cautem-core/engine"
-    "github.com/cautem/cautem-core/policy"
+    "github.com/cautem/quarshell-core/engine"
+    "github.com/cautem/quarshell-core/policy"
 )
 
 func main() {
@@ -91,7 +91,7 @@ func main() {
 | Roadmap | [ROADMAP.md](./ROADMAP.md) |
 | Organization | [https://github.com/cautem](https://github.com/cautem) |
 | Organization overview | [github.com/cautem](https://github.com/cautem) |
-| pkg.go.dev | [`github.com/cautem/cautem-core`](https://pkg.go.dev/github.com/cautem/cautem-core) |
+| pkg.go.dev | [`github.com/cautem/quarshell-core`](https://pkg.go.dev/github.com/cautem/quarshell-core) |
 
 ## License
 

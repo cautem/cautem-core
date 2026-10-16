@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/cautem/cautem-core/engine"
-	"github.com/cautem/cautem-core/internal/tofu"
-	"github.com/cautem/cautem-core/policy"
+	"github.com/cautem/quarshell-core/engine"
+	"github.com/cautem/quarshell-core/internal/tofu"
+	"github.com/cautem/quarshell-core/policy"
 )
 
 func TestBinaryTOFU(t *testing.T) {
